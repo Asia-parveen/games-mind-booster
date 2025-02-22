@@ -1,10 +1,16 @@
 import streamlit as st
 import random
 import time
+from PIL import Image
 
 # Set Page Config
 st.set_page_config(page_title="Mind Growth Kids", page_icon="🧠", layout="centered")
+# Load and Resize Image
+image = Image.open("images/kid.png")  # Image path ensure karein
+resized_image = image.resize((300, 200))  # Width: 300, Height: 300
 
+# Display Image with Proper Size
+st.image(resized_image, caption="🧠 Fun Mind Growth Game for Kids!", use_container_width=True)
 # Custom Styling
 st.markdown("""
     <style>
